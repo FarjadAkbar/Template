@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        margin: 0;
+        background: #cccc;
+    }
+    .container{
+        width: 640px;
+        height: 340px;
+        margin: 0 auto;
+        perspective-origin: left;
+        perspective: 100px;
+        transform: preserve-3d;
+    }
+    .card{
+        width: 640px;
+        height: 340px;
+        position: relative;
+        /* box-shadow: 10px 20px 0 60px rgba(0, 0, 0, 0.7), 0 17px 17px rgba(0, 0, 0, 0.5);  */
+        transform:rotate(0deg);
+        transform-style: preserve-3d;
+        transform-origin: 100% 0%;
+        transition: 0.8s all ease-in-out;
+    }
+   .front, .back{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    .back{
+        transform: rotateY(-180deg);
+    }
+    .card:hover .front{
+        transform: translateX(-50%);
+        transition:0.5s all ease-in-out;
+    }
+    .card:hover .back{
+        transform: translateX(50%);
+        transition:0.4s all ease-in-out;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="front">
+                <img src="../../Media/alora-griffiths-980713-unsplash-2.jpg" width="600" height="370" alt="">
+            </div>
+            <div class="back">
+                <h1>
+                    Farjad Akbar
+                    <span>Web Designer <i>&</i> Developer</span>
+                </h1>
+                <ul>
+                    <li>99999999</li>
+                    <li>farjad@gmail.com</li>
+                    <li>mysite.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

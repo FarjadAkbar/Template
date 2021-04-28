@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Popup Html Loader</title>
+</head>
+
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    p{
+        padding: 20px 0;
+    }
+    h1{
+        font-size: 40px;
+        text-align: center;
+        line-height: 52px;
+        margin: 25px 0;
+        padding-bottom: 25px;
+        color: #d31f71;
+        border-bottom: 3px solid gray;
+    }
+    .navi{
+        text-align: center;
+    }
+    .navi li{
+        display: inline-block;
+        margin: 5px;
+    }
+    .navi li a{
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        display: block;
+        padding: 10px 18px;
+        letter-spacing: 2px;
+        color: #ccc;
+        transition: all 0.5s ease-in-out;
+    }
+    .navi li a.active{
+        color: black;
+        border-bottom: 1px solid #ccc;
+    }
+    .navi li a:hover{
+        color: #d31f71;
+    }
+    .page-wrap{
+        padding: 25px;
+    }
+    .page-wrap .page{
+        display: none;
+    }
+    .page-wrap .page.active{
+        display: block;
+    }
+    .load{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: wheat;
+        display: none;
+    }
+    .load .in-wrap{
+        width: 120px;
+        height: 120px;
+        position: absolute;
+    }
+    .load .sq{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background: #d31f71;
+        opacity: 0;
+        transform: scale(0.1,0.1) rotate(75deg);
+        transition: all 0.4s;
+    }
+    .load .sq:nth-child(1){
+        top: 0;
+        left: 0;
+        transition-delay: 0s;
+    }
+    .load .sq:nth-child(2){
+        top: 0;
+        left: 59px;
+        transition-delay: 0.1s;
+    }
+    .load .sq:nth-child(3){
+        top: 59px;
+        left: 0;
+        transition-delay: 0.2s;
+    }
+    .load .sq:nth-child(4){
+        top: 59px;
+        left: 59px;
+        transition-delay: 0.3s;
+    }
+    .load .sq.animate{
+        transform: scale(1,1) rotate(0deg);
+        opacity: 1;
+    }
+    .load .sq.full{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .load .sq.white{
+        background-color: white;
+    }
+</style>
+
+
+<body>
+    
+    <div class="navi">
+        <ul>
+            <li><a href="" id="on" class="active">First Page</a></li>
+            <li><a href="" id="tw">Last Page</a></li>
+        </ul>
+    </div>
+    <div class="page-wrap">
+        <div class="page on active">
+            <h1>First Page</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+            </p>
+        </div>
+        <div class="page tw">
+            <h1>Last Page</h1>
+            <p>
+                
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quaerat ab minus nihil ut! Culpa sint rem saepe sequi, quia tempore dignissimos atque deleniti incidunt, quod debitis eos ad. Dicta?
+            </p>
+        </div>
+    </div>
+
+    <div class="load">
+        <div class="in-wrap">
+            <div class="sq"></div>
+            <div class="sq"></div>
+            <div class="sq"></div>
+            <div class="sq"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="E:\templates\Extra\Js\some.js"></script>
+</body>
+</html>

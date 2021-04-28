@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <title>3D card</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+    }
+
+    .container{
+        /* background: lightblue; */
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card{
+        transform-style: preserve-3d;
+        min-height: 80vh;
+        width: 30rem;
+        border-radius: 30px;
+        padding: 0rem 5rem;
+        box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2);
+    }
+
+    .img{
+        min-height: 35vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .img img{
+        width: 20rem;
+        z-index: 3;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .circle{
+        width: 12rem;
+        height: 12rem;
+        background: linear-gradient(
+            to right,
+            rgba(244, 70, 60, 0.75),
+            rgba(8, 83, 156, 0.75)
+        );
+        border-radius: 100px;
+        position: absolute;
+        /* top: 15%; */
+    }
+
+    .info h1{
+        font-size: 3rem;
+        transition: all 0.3s ease-in-out;
+    }
+    .info h3{
+        font-size: 1.3rem;
+        padding: 2rem 0rem;
+        color: #585858;
+        font-weight: lighter;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .sizes{
+        display: flex;
+        justify-content: space-between;
+        transition: all 0.3s ease-in-out;
+    }
+    .sizes button{
+        padding: 0.5rem 2rem;
+        background: none;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #585858;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    button.active{
+        background-color: #585858;
+        color: white;
+    }
+    .purchase{
+        margin: 3rem 0rem;
+    }
+
+    .purchase button{
+        width: 100%;
+        padding: 1rem 0rem;
+        background: #f54642;
+        cursor: pointer;
+        color: #fff;
+        border:none;
+        border-radius: 30px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+        font-family: "Montserrat";
+        letter-spacing: 2px;
+        transition: all 0.3s ease-in-out;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="img">
+                <div class="circle"></div>
+                <img src="https://raw.githubusercontent.com/developedbyed/3d-card-effect/master/adidas.png" alt="adidas">
+            </div>
+            <div class="info">
+                <h1 class="title">Adidas ZX</h1>
+                <h3>FUTURE-READY TRAINERS WITH WRAPPED BOOST FOR EXCEPTION COMFORT.</h3>
+                <div class="sizes">
+                    <button>37</button>
+                    <button>39</button>
+                    <button class="active">41</button>
+                    <button>43</button>
+                </div>
+                <div class="purchase">
+                    <button>Purchase</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+    
+<script>
+    // movement animation happen
+    const card=document.querySelector(".card");
+    const container=document.querySelector(".container");
+    
+    // item
+    const title=document.querySelector(".title");
+    const img=document.querySelector(".img img");
+    const purchase=document.querySelector(".purchase button");
+    const size=document.querySelector(".sizes");
+    const description=document.querySelector(".info h3");
+    
+    // moving animation event
+    card.addEventListener("mousemove", (e) => {
+        
+        let xAxis=(window.innerWidth / 2 - e.pageX) / 25 ;
+        let yAxis=(window.innerWidth / 2 - e.pageY) / 25;
+
+        console.log(xAxis);
+        card.style.transform=`rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        card.style.transition="all 0.1s ease";
+        // card.style.transform=``;
+
+    });
+
+    // animate in
+    container.addEventListener("mouseenter", e => {
+        card.style.transition="none";
+
+        // popout
+        title.style.transform="translateZ(150px)";
+        img.style.transform="translateZ(200px) rotateZ(-45deg)";
+        purchase.style.transform="translateZ(125px)";
+        size.style.transform="translateZ(100px)";
+        description.style.transform="translateZ(75px)";
+    });
+
+    // animate out
+    container.addEventListener("mouseleave", e => {        
+        card.style.transition="all 0.5s ease";
+        card.style.transform=`rotateY(0deg) rotateX(0deg)`;
+
+        title.style.transform="translateZ(0px)";
+        img.style.transform="translateZ(0px)  rotateZ(0deg)";
+        purchase.style.transform="translateZ(0px)";
+        size.style.transform="translateZ(0px)";
+        description.style.transform="translateZ(0px)";
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Responsive Menu Bael</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<style>
+    html,body{
+        overflow: hidden;
+        height: 100%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    body{
+        background: linear-gradient(180deg,#000 0%,#ccc 80%);
+        background-repeat: no-repeat;
+    }
+
+    .header{
+        background-color: cornsilk;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        box-shadow: none;
+        position: fixed;
+        overflow: hidden;
+        height: 59px !important;
+        z-index: 10;
+        margin-left: -8px;
+        margin-top: -8px;
+    }
+
+
+    #sidebarmenu{
+        height: 100%;
+        position: fixed;
+        width: 250px;
+        left: 0;
+        margin-top: 59px;
+        background-color: linear-gradient(180deg, #fefefe 0%,#000000 80%);
+        transform: translateX(-250px);
+        transition: transform 250ms ease-in-out ;
+    }
+
+    .sidebarmenuinner{
+        margin: 0;
+        padding: 0;
+        border: rgba(255, 255, 0, 0.1);
+    }
+
+    .sidebarmenuinner li{
+        list-style: none;
+        color: orangered;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 20px;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(255, 255, 0, 0.10);
+    }
+
+    .sidebarmenuinner li span{
+        display: block;
+        font-size: 20px;
+        color: yellow;
+    }
+
+    .sidebarmenuinner li a{
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        color: rgb(25, 6, 71);
+        text-transform: uppercase;
+    }
+
+    input[type="checkbox"]:checked ~ #sidebarmenu{
+        transform: translateX(0);
+    }
+
+    input[type="checkbox"]{
+        box-sizing: border-box;
+        transition: 0.3s all;
+        display: none;
+    }
+
+    .contenttoggle{
+        box-sizing: border-box;
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+        height: 22px;
+        top: 22px;
+        left: 15px;
+        width: 22px;
+        cursor: pointer;
+        position: absolute;
+        transition: all 0.3s;        
+    }
+
+    .spinner{
+        box-sizing: border-box;
+        transition: all 0.3s;
+        position: absolute;
+        height: 3px;
+        padding: 1px;
+        width: 100%;
+        background-color: black;
+    }
+
+    .horizontal{
+        transition: 0.3s all;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+
+    
+    .diagonal.part-1{        
+        transition: 0.3s all;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+    }
+
+    .diagonal.part-2{        
+        transition: 0.3s all;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+
+</style>
+
+<body>
+    <div class="header"></div>
+    <input type="checkbox" class="opensidebarmenu" id="opensidebarmenu">
+    <label for="openidebarmenu" class="contenttoggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarmenu">
+        <ul class="sidebarmenuinner">
+            <li>farjad akbar <span> Web developer</span></li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Youtube</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Linked in</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallex While Scrolling Page</title>
+</head>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        line-height: 1.4;
+        color: #444;
+        font-family: sans-serif;
+        /* overflow: hidden; */
+        background: white;
+    }
+    .text-center{
+        text-align: center;
+    }
+    .box{
+        width: 70%;
+        margin: 0 auto;
+        background: #efefef;
+        padding: 100px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 1px #777;
+        margin-bottom: 15px;
+        border-radius: 100px;
+    }
+
+    .dl{
+        margin-top: 250px;
+        padding: 300px;
+    }
+    h1{
+        font-size: 120px;
+        margin-top: 10%;
+    }
+    h2{
+        font-weight: 400;
+        width: 75%;
+        margin: 0 auto;
+    }
+    .b2{
+        background: #dedede;
+    }
+</style>
+
+<body>
+    <section class="page-header text-center">        
+        <h1>Parallex Start</h1>        
+        <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum veritatis molestiae, cum error, eaque praesentium obcaecati aspernatur vel assumenda provident fugit? Illo recusandae odit eum debitis. Quaerat officia sunt reprehenderit nostrum sed, illo delectus neque nulla ipsam culpa nemo atque amet quo obcaecati odio quam cupiditate commodi architecto cum!
+        </h2>        
+    </section>
+
+    <div class="demo">
+        <br><br>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore non labore commodi necessitatibus nulla accusamus unde sapiente ipsam nemo ratione amet animi, maiores tempore asperiores libero quae autem voluptate, nam cupiditate ea. Natus reprehenderit totam accusantium eaque, officia nesciunt dolores, veniam ipsum modi deserunt ratione inventore, ea repellendus odio a!
+        </div>
+
+        <img src="images/blobs parallax/one.png" data-enllax-ratio="0.20" data-enllax-type="foreground" style="z-index:99;" alt="">
+        <img src="images/blobs parallax/layer-3.png" data-enllax-ratio="1.50" data-enllax-type="foreground" style="z-index:99; background-position: center;" alt="">
+        
+        <img src="images/blobs parallax/layer-2.png" data-enllax-ratio="0.3" data-enllax-type="foreground" style="z-index:99;" alt="">
+        <img src="images/blobs parallax/layer-3.png" data-enllax-ratio="-0.5" data-enllax-type="foreground" style="z-index:99;" alt="">
+
+        <div class="box b2 text-center" data-enllax-ratio="-0.3" data-enllax-type="foreground">
+            <h2>Moving</h2>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repudiandae sunt ullam tempora asperiores enim itaque deserunt molestiae id temporibus, fugiat quae sint rem maiores inventore atque. Vero illo nulla esse maiores ipsa laudantium nam totam, illum repudiandae! Explicabo architecto saepe at eligendi quo, nesciunt cum et dolor voluptatum? Numquam.            
+        </div>
+
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut deleniti necessitatibus amet dicta fugiat repellendus, nobis rem laudantium dolorum, quidem tenetur dignissimos! Ipsam laborum totam ipsum nostrum aliquid, vel illum consequatur earum necessitatibus voluptatem? Facere, amet quam vel repellendus fugit saepe, dicta vero quos cum modi nobis et. Placeat, cumque.
+        </div>
+    </div>
+
+    <div class="dl"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="images/blobs parallax/jquery.enllax.js"></script>
+    <script src="images/blobs parallax/jquery.enllax.min.js"></script>
+
+    <script>
+        (function($){
+            $(window).enllax();
+        })(jQuery);
+    </script>
+</body>
+</html>

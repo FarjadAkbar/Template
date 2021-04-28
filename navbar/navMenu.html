@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Nav With Logo Placement</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: sans-serif;
+        font-weight: 300;
+        color: #333;
+    }
+    nav.bg-transparent{
+        background:transparent;
+        transition: all 0.3s ease;
+        height: 120px;
+    }
+    nav ul{
+        transition: all 0.6s ease;
+    }
+
+    nav ul li.nav-item a{
+        color: #f1f1f1 !important;
+        font-family: sans-serif;
+        transition: all 0.3s ease;
+        letter-spacing: 2px;
+    }
+    nav ul li.nav-item a:hover{
+        color: #3498db !important;
+    }
+    .nav-dark .navbar-nav .nav-link{
+        color: rgba(255,255,255,0.5);
+        margin-right: 20px;
+    }
+
+    @media only screen and(min-width: 992px){
+        .nav-scroll{
+            margin: 0 35px;
+            transition: all 0.6 ease;
+        }
+        .logo{
+            display: block !important;
+            transition: all 0.9s ease;
+        }
+    }
+    
+    @media only screen and(max-width: 992px){
+        img#logo{
+            display: none !important;
+        }
+    }
+    img#logo{
+        margin-top: 18px;
+        padding: 0 10px;
+        position: absolute;
+        display: none;
+        transition: all 0.9s ease;
+    }
+
+    header.hero{
+        background: url(images/2596234.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-attachment: fixed;
+    }
+    .content-title{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40%;
+    }
+    main{
+        position: relative;
+        margin-top: 160px;
+    }
+</style>
+<body>
+    <nav id="efec-scroll" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navs">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navs">
+            <ul id="ulone" class="navbar-nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Protofilo</a>
+                </li>
+            </ul>
+
+            <img src="images/—Pngtree—cartoon flame logo design free_2951394.png" id="logo" class="" width="7%" alt="">
+
+            <ul id="ultwo" class="navbar-nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        &nbsp;&nbsp;&nbsp;&nbsp; Faq
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="content-title">
+                <h2><img src="images/—Pngtree—cartoon flame logo design free_2951394.png" width="13%" alt=""></h2>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-des box">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, doloremque ullam excepturi natus molestias nostrum dicta doloribus veniam molestiae quo ducimus repudiandae nam totam tenetur dolore blanditiis illum id? Dolore illum ducimus incidunt tempora, ipsa asperiores, aut assumenda eos expedita ratione nulla saepe voluptatibus deserunt sint laboriosam eaque? Minus, laboriosam illum quisquam quidem at veniam magnam quam officia quis perferendis eius rem voluptate dolor enim alias quos similique nihil facere fuga? Aperiam maxime quo esse quae fuga? Labore cum et praesentium vitae optio hic itaque explicabo ad omnis ut corrupti animi, quaerat sed a iste ab repellendus ipsa quia corporis?
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, doloremque ullam excepturi natus molestias nostrum dicta doloribus veniam molestiae quo ducimus repudiandae nam totam tenetur dolore blanditiis illum id? Dolore illum ducimus incidunt tempora, ipsa asperiores, aut assumenda eos expedita ratione nulla saepe voluptatibus deserunt sint laboriosam eaque? Minus, laboriosam illum quisquam quidem at veniam magnam quam officia quis perferendis eius rem voluptate dolor enim alias quos similique nihil facere fuga? Aperiam maxime quo esse quae fuga? Labore cum et praesentium vitae optio hic itaque explicabo ad omnis ut corrupti animi, quaerat sed a iste ab repellendus ipsa quia corporis?
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, doloremque ullam excepturi natus molestias nostrum dicta doloribus veniam molestiae quo ducimus repudiandae nam totam tenetur dolore blanditiis illum id? Dolore illum ducimus incidunt tempora, ipsa asperiores, aut assumenda eos expedita ratione nulla saepe voluptatibus deserunt sint laboriosam eaque? Minus, laboriosam illum quisquam quidem at veniam magnam quam officia quis perferendis eius rem voluptate dolor enim alias quos similique nihil facere fuga? Aperiam maxime quo esse quae fuga? Labore cum et praesentium vitae optio hic itaque explicabo ad omnis ut corrupti animi, quaerat sed a iste ab repellendus ipsa quia corporis?
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.onscroll=function(e){
+            e.preventDefault();
+            let scroll=window.scrollY;
+
+            var Scroll=document.querySelector("#efec-scroll");
+            var ulone=document.querySelector("#ulone");
+            var ultwo=document.querySelector("#ultwo");
+            var logo=document.getElementById("logo");
+
+            if(scroll > 200){
+                Scroll.classList.add("bg-menu");
+                ulone.classList.add("nav-scroll");
+                ultwo.classList.add("nav-scroll");
+                logo.classList.add("logo");                
+            }
+            else{
+                Scroll.classList.remove("bg-menu");
+                ulone.classList.remove("nav-scroll");
+                ultwo.classList.remove("nav-scroll");
+                logo.classList.remove("logo");   
+            }
+
+        }
+    </script>
+</body>
+</html>

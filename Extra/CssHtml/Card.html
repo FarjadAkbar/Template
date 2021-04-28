@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Prodct Card</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    background: #7763e6;
+}
+
+.box{
+    position: relative;
+}
+
+.box .pic{
+    position: relative;
+    z-index: 1;
+    transform-origin: 95% 50% 0;
+    transition: all .5s ease 0s;
+}
+
+.box .pic::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 95%;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: -4px 0 0 -4px;
+}
+
+.box:hover .pic{
+    transform: rotate(-140deg);
+}
+
+.box .pic img{
+    border-radius: 50%;
+    height: 30%;
+    width: 100%;
+    border: 4px solid white;
+}
+
+.box .content{
+    width: 100%;
+    top: 0;
+    border-radius: 50%;
+    height:100% ;
+    padding: 70px 20px;
+    position: absolute;
+    background: #e05382;
+}
+
+.box .tittle{
+    text-align: center;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+
+.box .tittle a{
+    color: white;
+    transition: all .3s ease 0s;
+}
+
+.box .tittle a:hover{
+    color:#333;
+}
+
+.box .description{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+</style>
+
+<body>
+    <div class="box-bag">
+            <br><br><br>
+        <div class="container">
+           <div class="row">
+
+            <div class="col-md-4">
+                   <div class="box">
+                       <div class="pic">
+                           <img src="E:\templates\images\pic1.jpeg" alt="">
+                       </div>
+                       <div class="content">
+                           <h3 class="tittle"><a href="">Web Designer</a></h3>
+                       <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, repudiandae beatae! Quam suscipit placeat impedit sapiente eligendi animi debitis commodi magni sed! Velit eius minus ipsam nobis dolorum ea quod.Consequuntur, repudiandae beatae! Quam suscipit placeat impedit sapiente eligendi animi debitis commodi magni sed! Velit eius minus ipsam nobis dolorum ea quod.Consequuntur</p>
+                    </div>
+                    </div>
+               </div>
+
+               
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="pic">
+                        <img src="E:\templates\images\pic3.jpeg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3 class="tittle"><a href="">Web Designer</a></h3>                    
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, repudiandae beatae! Quam suscipit placeat impedit sapiente eligendi animi debitis commodi magni sed! Velit eius minus ipsam nobis dolorum ea quod.Consequuntur, repudiandae beatae! Quam suscipit placeat impedit sapiente eligendi animi debitis commodi magni sed! Velit eius minus ipsam nobis dolorum ea quod.Consequuntur</p>             </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="pic">
+                        <img src="E:\templates\images\pic4.jpeg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3 class="tittle"><a href="">Web Designer</a></h3>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, repudiandae beatae! Quam suscipit placeat impedit sapiente eligendi animi debitis commodi magni sed! Velit eius minus ipsam nobis dolorum ea quod.Consequuntur, repudiandae beatae! Quam suscipit placeat impedit sapiente eligendi animi debitis commodi magni sed! Velit eius minus ipsam nobis dolorum ea quod.Consequuntur</p>                 </div>
+                </div>
+            </div>
+
+           </div>
+        </div>
+    </div>
+</body>
+</html>

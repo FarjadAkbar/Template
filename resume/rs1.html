@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<style>
+    html, body{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 16px;
+        font-family: sans-serif;
+        overflow-x: hidden;
+        position: relative;
+        vertical-align: baseline;
+        background-color: deepskyblue;
+    }
+
+    .about, .skills, 
+    .education, .languages, 
+    .contact, .experience{
+        padding: 40px;
+        min-height: 360px;
+    }
+
+    .education, .languages, 
+    .contact, .experience{
+        margin-top: 30px;
+    }
+
+    header{
+        text-align: center;
+        min-height: 400px;
+        overflow: hidden;
+        position: relative;
+        padding: 160px 0 140px 0;
+    }
+
+    header img{
+        display: inline-block !important;
+        border: 3px solid #fff;
+        padding: 5px; 
+    }
+
+    header h2{
+        padding-top: 40px;
+    }
+
+    .about, .languages, .contact{
+        background: #fff;
+    }
+
+    .skills, .education, .experience{
+        background: #3366cc;
+        color: #f5f5f5;
+    }
+
+    .skills .progress{
+        height: 6px;
+        border-radius: 0px;
+        margin-top: 2px;
+    }
+    
+    .skills .progress .progress-bar-primary{
+        background: #204090;
+    }
+
+    .skills strong, span{
+        display: inline-block;
+        font-weight: bold;
+        margin-top: 16px;
+    }
+
+    .education .education-content{
+        padding-bottom: 14px;
+    }
+
+    .education h5{
+        display: inline-block;
+    }
+    
+    .education span{
+        margin-right: 10px;
+        padding-left: 20px;
+    }
+
+    .contact{
+        padding: 50px;
+    }
+
+    .languages ul{
+        padding: 15px;
+        font-size: 17px;
+        list-style: none;
+    }
+
+    .languages ul li{
+        padding-bottom: 6px;
+    }
+
+    .experience span{
+        padding-right: 10px;
+    }
+
+    .footer{
+        color: #fff;
+        background-color:rgb(4, 95, 126);
+    }
+    a{
+        color: #fff;
+    }
+    .footer ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer ul li{
+        padding: 0px 10px;
+        list-style: none;
+    }
+</style>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="../../Media/blake-guidry-719044-unsplash-min.jpg" class="img-fluid img-circle" alt="Me">
+                    <h1>Hi, I am Farjad</h1>
+                    <h1>Crreative Developer</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about">
+                        <h3>Easy Profile</h3>
+                        <h2>Responsive Profile Card</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sunt officia modi! Sequi voluptates distinctio rem aliquam cum sint totam accusamus placeat modi eveniet iure quo officia amet iusto consectetur ab quae nostrum eum, exercitationem itaque ex? Tempora explicabo sit dolores architecto voluptatem dolorum? Veritatis doloremque officiis soluta dolorum rem?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="skills">
+                        <h3>Our Skills</h3>
+                   
+                        <strong>Php Mysql</strong>
+                        <span class="pull-right">70%</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+                        </div>
+
+                        <strong>UI/UX Design</strong>
+                        <span class="pull-right">85%</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+                        </div>
+                        
+                        <strong>Bootstrap</strong>
+                        <span class="pull-right">95%</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="education">
+                        <h2>Education</h2>
+                        <h4 class="education-title">New Web Design</h4>
+                        <div class="education-school">
+                            <h5>School Of Media</h5>
+                            <h5>2015 March - 2020 November</h5>
+                        </div>
+                        <p class="education-desc">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dolorem perferendis beatae cumque. Laborum architecto fugiat quasi esse repudiandae, at fugit, quo sint provident recusandae tenetur, perspiciatis commodi aspernatur ullam repellat voluptatibus! Eveniet, numquam. Tempora porro id explicabo assumenda pariatur in illum aut voluptate officiis est. Tempora magni ullam quisquam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="languages">
+                        <ul>
+                            <li>English</li>
+                            <li>Urdu</li>
+                            <li>Spanish</li>
+                            <li>Hindi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="contact">
+                    <p><i class="fa fa-map-marker"></i> 123 Devli Road, Uk</p>
+                    <p><i class="fa fa-phone"></i> 03312740314 </p>
+                    <p><i class="fa fa-envelope"></i> farjadakbar4@gmail.com</p>
+                    <p><i class="fa fa-globe"></i> demosites2244@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="experience">
+                    <h2>Experience</h2>
+                    <div class="experience-content">
+                        <h4 class="experience-title">Website Development</h4>
+                        <h5>Our Media Company</h5>
+                        <h5>2015 December - 2023 April</h5>
+                        <p class="education-description">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste eligendi repellendus exercitationem aperiam placeat quas expedita maiores nesciunt ut. Exercitationem perspiciatis quaerat consequatur harum illum odit veniam similique natus sunt, assumenda qui debitis deserunt quas repellendus, quam quasi nobis cum a, ratione maxime. Placeat velit impedit ad quos? Repudiandae, ad!
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mt-4">
+                    <p>Copyright &copy; 2020 Easy Profile</p>
+                    <ul>
+                        <li><a href="" class="fa fa-facebook"></a></li>
+                        <li><a href="" class="fa fa-instagram"></a></li>
+                        <li><a href="" class="fa fa-twitter"></a></li>
+                        <li><a href="" class="fa fa-linkedin"></a></li>
+                        <li><a href="" class="fa fa-dribbble"></a></li>
+                        <li><a href="" class="fa fa-behance"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
